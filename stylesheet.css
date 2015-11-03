@@ -1,0 +1,19 @@
+body {
+  background-color: #DBC78B;
+  font-family: Georgia, serif;
+  color: #464426;
+}
+
+.data {
+  font-family: Verdana, sans-serif;
+  color: #162215;
+}
+
+.highlight {
+  font-family: 'Oswald', sans-serif;
+  color: #8D3722;
+}
+
+.box {
+  background-color: #C97954;
+}
