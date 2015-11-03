@@ -17,3 +17,7 @@ body {
 .box {
   background-color: #C97954;
 }
+
+#logo {
+  height: 50px;
+}

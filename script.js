@@ -39,11 +39,8 @@ function hourlyModel(location) {
 function hourlyReport (location) {
   for (var j = 0; j < times.length; j++) {
     var liNode = document.createElement('li');
-    var hourlyNum = location.hourlyTotals[j];
-    var hourlyNumToString = hourlyNum.toString();
-    var text = times[j] + ': ' + hourlyNumToString + ' cookies.'
-    var liText = document.createTextNode(text);
-    liNode.appendChild(liText);
+    liNode.textContent = times[j] + ': ' + location.hourlyTotals[j] + ' cookies.';
+    console.log(liNode);
     document.getElementById(location.shopID).appendChild(liNode);
   }
 }
