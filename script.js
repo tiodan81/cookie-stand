@@ -7,49 +7,76 @@ function Shop(shopID, minCustHour, maxCustHour, avgCookiesCust) {
   this.custPerHour = function () {
     return (Math.floor(Math.random() * (this.maxCustHour - this.minCustHour)) + this.minCustHour);
   };
+  this.cookiesPerHour = function() {
+    return Math.floor(this.custPerHour() * this.avgCookiesCust);
+  };
+  this.hourlyModel = function() {
+    var total = 0;
+
+    for (var i = 0; i < times.length; i++) {
+      var cookies = this.cookiesPerHour();
+      this.hourlyTotals.push(cookies);
+      total += cookies;
+    };
+
+    this.hourlyTotals.push(total);
+    console.log(this.hourlyTotals);
+  }
+
 }
 
-var pikePlace = new Shop('pikePlace', 17, 88, 5.2);
-var seaTac = new Shop('seaTac', 6, 44, 1.2);
-var southcenter = new Shop('southcenter', 11, 38, 1.9);
-var bellevue = new Shop('bellevue', 20, 48, 3.3);
-var alki = new Shop('alki', 3, 24, 2.6);
+var pikePlace = new Shop('Pike Place Market', 17, 88, 5.2);
+var seaTac = new Shop('SeaTac Airport', 6, 44, 1.2);
+var southcenter = new Shop('Southcenter Mall', 11, 38, 1.9);
+var bellevue = new Shop('Bellevue Square', 20, 48, 3.3);
+var alki = new Shop('Alki', 3, 24, 2.6);
 
 var allShops = [pikePlace, seaTac, southcenter, bellevue, alki];
-var times = ['10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', 'total'];
-
-function cookiesPerHour(location) {
-  return Math.floor(location.custPerHour() * location.avgCookiesCust);
-}
-
-function hourlyModel(location) {
-  var hourlyArray = location.hourlyTotals;
-  var total = 0;
-
-  for (var i = 0; i < times.length; i++) {
-    var cookies = cookiesPerHour(location);
-    hourlyArray.push(cookies);
-    total += cookies;
-  }
-
-  hourlyArray.push(total);
-  location.hourlyTotals = hourlyArray;
-}
-
-function hourlyReport (location) {
-  for (var j = 0; j < times.length; j++) {
-    var liNode = document.createElement('li');
-    liNode.textContent = times[j] + ': ' + location.hourlyTotals[j] + ' cookies.';
-    console.log(liNode);
-    document.getElementById(location.shopID).appendChild(liNode);
-  }
-}
+var times = ['10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm'];
 
 function reportAllShops () {
  for (var k = 0; k < allShops.length; k++) {
-    hourlyModel(allShops[k]);
-    hourlyReport(allShops[k]);
+    allShops[k].hourlyModel();
   }
 }
 
+function makeTable () {
+  var tbl = document.createElement('table');
+  var thRow = document.createElement('tr');
+  var emptyCell = document.createElement('th');
+  thRow.appendChild(emptyCell);
+
+  for (var k = 0; k < times.length; k++) {
+    var thElement = document.createElement('th');
+    thElement.textContent = times[k];
+    thRow.appendChild(thElement);
+  }
+
+  var totalCell = document.createElement('th');
+  totalCell.textContent = 'Total';
+  thRow.appendChild(totalCell);
+  tbl.appendChild(thRow);
+
+  for (var j = 0; j < allShops.length; j++) {
+    var trElement = document.createElement('tr');
+    var rowName = document.createElement('td');
+    rowName.textContent = allShops[j].shopID;
+    trElement.appendChild(rowName);
+
+    for (var i = 0; i <= times.length; i++) {
+      var tdElement = document.createElement('td');
+      tdElement.textContent = allShops[j].hourlyTotals[i];
+      trElement.appendChild(tdElement);
+    }
+
+    var shopTotal = document.createElement('td');
+    shopTotal.textContent = allShops[j].total;
+    trElement.appendChild(shopTotal);
+    tbl.appendChild(trElement);
+  }
+
+  document.getElementById('table').appendChild(tbl);
+}
+
 reportAllShops();
+makeTable();
