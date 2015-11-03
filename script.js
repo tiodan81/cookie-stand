@@ -3,10 +3,10 @@ function Shop(shopID, minCustHour, maxCustHour, avgCookiesCust) {
   this.minCustHour = minCustHour;
   this.maxCustHour = maxCustHour;
   this.avgCookiesCust = avgCookiesCust;
+  this.hourlyTotals = [];
   this.custPerHour = function () {
     return (Math.floor(Math.random() * (this.maxCustHour - this.minCustHour)) + this.minCustHour);
   };
-  this.hourlyTotals = []
 }
 
 var pikePlace = new Shop('pikePlace', 17, 88, 5.2);
