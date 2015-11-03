@@ -26,7 +26,7 @@ function hourlyModel(location) {
   var hourlyArray = location.hourlyTotals;
   var total = 0;
 
-  for (var i = 0; i < 8; i++) {
+  for (var i = 0; i < times.length; i++) {
     var cookies = cookiesPerHour(location);
     hourlyArray.push(cookies);
     total += cookies;
@@ -38,7 +38,7 @@ function hourlyModel(location) {
 
 function hourlyReport (location) {
   for (var j = 0; j < times.length; j++) {
-    var liNode = document.createElement('LI');
+    var liNode = document.createElement('li');
     var hourlyNum = location.hourlyTotals[j];
     var hourlyNumToString = hourlyNum.toString();
     var text = times[j] + ': ' + hourlyNumToString + ' cookies.'
