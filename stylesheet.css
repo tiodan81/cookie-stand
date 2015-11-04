@@ -4,6 +4,16 @@ body {
   color: #464426;
 }
 
+header {
+  background-color: #8397A6;
+ /* position: fixed;*/
+  width: 100%;
+}
+
+main {
+  position: relative;
+}
+
 .data {
   font-family: Verdana, sans-serif;
   color: #162215;
@@ -23,6 +33,7 @@ body {
 
 #logo {
   height: 50px;
+  margin: 10px, 20px, 10px, auto;
 }
 
 th, td {

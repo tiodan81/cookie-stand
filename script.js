@@ -1,9 +1,14 @@
+var allShops = [];
+var times = ['10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm'];
+
 function Shop(shopID, minCustHour, maxCustHour, avgCookiesCust) {
   this.shopID = shopID;
   this.minCustHour = minCustHour;
   this.maxCustHour = maxCustHour;
   this.avgCookiesCust = avgCookiesCust;
   this.hourlyTotals = [];
+  allShops.push(this);
+
   this.custPerHour = function () {
     return (Math.floor(Math.random() * (this.maxCustHour - this.minCustHour)) + this.minCustHour);
   };
@@ -29,9 +34,6 @@ var seaTac = new Shop('SeaTac Airport', 6, 44, 1.2);
 var southcenter = new Shop('Southcenter Mall', 11, 38, 1.9);
 var bellevue = new Shop('Bellevue Square', 20, 48, 3.3);
 var alki = new Shop('Alki', 3, 24, 2.6);
-
-var allShops = [pikePlace, seaTac, southcenter, bellevue, alki];
-var times = ['10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm'];
 
 function reportAllShops () {
  for (var k = 0; k < allShops.length; k++) {
