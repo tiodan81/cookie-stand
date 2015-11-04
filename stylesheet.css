@@ -7,17 +7,24 @@ body {
 .data {
   font-family: Verdana, sans-serif;
   color: #162215;
+  text-align: right;
 }
 
-.highlight {
+.highlight, h1, h2, h3, h4, h5, h6 {
   font-family: 'Oswald', sans-serif;
   color: #8D3722;
 }
 
 .box {
   background-color: #C97954;
+  border-radius: 5px;
+  font-size: 18px;
 }
 
 #logo {
   height: 50px;
+}
+
+th, td {
+  padding: 8px;
 }

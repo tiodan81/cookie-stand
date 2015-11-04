@@ -21,8 +21,7 @@ function Shop(shopID, minCustHour, maxCustHour, avgCookiesCust) {
 
     this.hourlyTotals.push(total);
     console.log(this.hourlyTotals);
-  }
-
+  };
 }
 
 var pikePlace = new Shop('Pike Place Market', 17, 88, 5.2);
@@ -42,6 +41,7 @@ function reportAllShops () {
 
 function makeTable () {
   var tbl = document.createElement('table');
+  tbl.className = 'box';
   var thRow = document.createElement('tr');
   var emptyCell = document.createElement('th');
   thRow.appendChild(emptyCell);
@@ -60,11 +60,13 @@ function makeTable () {
   for (var j = 0; j < allShops.length; j++) {
     var trElement = document.createElement('tr');
     var rowName = document.createElement('td');
+    rowName.className = 'highlight';
     rowName.textContent = allShops[j].shopID;
     trElement.appendChild(rowName);
 
     for (var i = 0; i <= times.length; i++) {
       var tdElement = document.createElement('td');
+      tdElement.className = 'data';
       tdElement.textContent = allShops[j].hourlyTotals[i];
       trElement.appendChild(tdElement);
     }
