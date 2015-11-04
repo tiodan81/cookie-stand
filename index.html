@@ -11,7 +11,28 @@
     <main>
       <h3>Hey look: a table showing hourly cookie sales and daily totals by location!</h3>
       <div id='table'></div>
+    <form id='shopform'>
+      <fieldset>
+       <legend>Cookie Shops</legend>
+
+       <label for='shopID'>Shop Name</label>
+       <input name='shopID' type='text'>
+
+       <label for='minCustHour'>Minimum Customers Per Hour</label>
+       <input name='minCustHour' type='text' size='50'>
+
+
+       <label for='maxCustHour'>Maximum Customers Per Hour</label>
+       <input name='maxCustHour' type='text' size='50'>
+
+       <label for='avgCookiesCust'>Average Cookies Per Customer</label>
+       <input name='avgCookiesCust' type='text' size='50'>
+
+       <button id='submit' type='submit'>Submit</button>
+     </fieldset>
+    </form>
     </main>
     <script src="script.js" type="text/javascript"></script>
   </body>
 </html>
+
