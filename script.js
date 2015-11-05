@@ -25,7 +25,6 @@ function Shop(shopID, minCustHour, maxCustHour, avgCookiesCust) {
     };
 
     this.hourlyTotals.push(total);
-    console.log(this.hourlyTotals);
   };
 }
 
@@ -82,5 +81,38 @@ function makeTable () {
   document.getElementById('table').appendChild(tbl);
 }
 
-reportAllShops();
-makeTable();
+var shopForm = document.getElementById('shopform');
+
+var renderNew = function() {
+  var table = document.getElementById('table');
+  table.innerHTML = null;
+  reportAllShops();
+  makeTable();
+}
+
+var handleFormSubmit = function(event) {
+  event.preventDefault();
+
+  var shop = event.target.shop.value;
+  var min = event.target.min.value;
+  var max = event.target.max.value;
+  var avg = event.target.avg.value;
+
+  console.log('shop:' + shop);
+  console.log('min:' + min);
+  console.log('max:' + max);
+  console.log('avg:' + avg);
+
+  var newShop = new Shop(shop, min, max, avg);
+
+  event.target.shop.value = null;
+  event.target.min.value = null;
+  event.target.max.value = null;
+  event.target.avg.value = null;
+
+  renderNew();
+};
+
+shopForm.addEventListener('submit', handleFormSubmit);
+
+renderNew();
