@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title>Cookie Shop</title>
+    <link rel='stylesheet' type='text/css' href='stylesheet.css'>
+  </head>
+  <body>
+
+    <header>
+      <img id='logo' src='images/salmon.png' />
+      <h1 class='highlight'>Salmon Cookies!</h1>
+    </header>
+
+    <main>
+
+      <h3>Hey look: a table showing hourly cookie sales and daily totals by location!</h3>
+      <div id='table'></div>
+
+    <form id='shopform'>
+      <fieldset>
+        <legend>Add/modify a shop</legend>
+
+        <label for='shop'>Shop name</label>
+        <input name='shop' type='text'>
+        <br />
+
+        <label for='min'>Minimum Customers Per Hour</label>
+        <input name='min' type='text' size='50'>
+        <br />
+
+        <label for='max'>Maximum Customers Per Hour</label>
+        <input name='max' type='text' size='50'>
+        <br />
+
+        <label for='avg'>Average Cookies Per Customer</label>
+        <input name='avg' type='text' size='50'>
+        <br />
+
+        <button id='submit' type='submit'>Submit</button>
+     </fieldset>
+    </form>
+
+    </main>
+    <script src="script.js" type="text/javascript"></script>
+
+  </body>
+</html>
+

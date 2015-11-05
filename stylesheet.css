@@ -36,6 +36,22 @@ main {
   margin: 10px, 20px, 10px, auto;
 }
 
-th, td {
+div#table {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+
+th {
   padding: 8px;
+  text-transform: uppercase;
+}
+
+td {
+  padding: 8px;
+}
+
+form#shopform {
+  /*padding: 2% 5%;*/
+
 }
