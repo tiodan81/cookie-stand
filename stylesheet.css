@@ -6,8 +6,12 @@ body {
 
 header {
   background-color: #8397A6;
- /* position: fixed;*/
+  position: fixed;
   width: 100%;
+  margin-top: -10px;
+  margin-left: -10px;
+  padding-left: 20px;
+  padding-top: 20px;
 }
 
 main {
