@@ -1,0 +1,94 @@
+body {
+  background-color: #DBC78B;
+  font-family: Georgia, serif;
+  color: #464426;
+  width: 95%;
+  margin: 0 auto;
+}
+
+/******* HEADER + LOGO ********/
+header {
+  background-color: #8397A6;
+  height: 90px;
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+header p {
+  margin-bottom: 10px;
+}
+
+#logo {
+  height: 60px;
+  margin: 10px 20px 10px 10px;
+  float: left;
+}
+
+/******* MAIN CONTENT + ASIDE ********/
+
+#maincontent {
+  width: 75%;
+  min-width: 250px;
+  float: left;
+}
+
+.feature p {
+  width: 90%;
+}
+
+.featurepic {
+  width: 90%;
+}
+
+.normarticle {
+  width: 45%;
+  float: left;
+  margin: 1%;
+  /*display: inline;*/
+}
+
+.normarticle p {
+  width: 70%;
+}
+
+.normpic {
+  height: 200px;
+}
+
+aside {
+  width: 25%;
+  float: right;
+}
+
+span.locname {
+  text-transform: uppercase;
+}
+
+
+
+/******** FOOTER *******/
+
+footer {
+  clear: both;
+  background-color: #8397A6;
+  width: 100%;
+  height: 80px;
+  border-radius: 5px;
+}
+
+/******* SALES TABLE *****/
+
+div#table {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+th {
+  padding: 8px;
+  text-transform: uppercase;
+}
+
+td {
+  padding: 8px;
+}

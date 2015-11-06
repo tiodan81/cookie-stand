@@ -1,0 +1,21 @@
+.data {
+  font-family: Verdana, sans-serif;
+  color: #162215;
+  text-align: right;
+}
+
+.highlight, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  color: #8D3722;
+}
+
+.box {
+  background-color: #C97954;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+ul {
+  font-family: 'Oswald', sans-serif;
+}
