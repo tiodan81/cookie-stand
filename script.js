@@ -86,7 +86,6 @@ function renderTable () {
 var handleFormSubmit = function(event) {
   event.preventDefault();
 
-//want to take formal shop name in input, but object name with no spaces
   var shop = event.target.shop.value;
   var min = event.target.min.value;
   var max = event.target.max.value;
@@ -97,17 +96,23 @@ var handleFormSubmit = function(event) {
   console.log('max:' + max);
   console.log('avg:' + avg);
 
- /* if (allShops.indexOf(shop)) {};
-
- for (var l = 0; l < allShops.length; l++) {
+  for (var l = 0; l < allShops.length; l++) {
     if (shop === allShops[l].shopID) {
-      //shop exists
-      //update shop
-      var updateShop =
-    } else {*/
+      console.log('found:' + shop);
+      var shopExists = true;
+      var shopToEdit = allShops[l];
+    }
+  }
+
+  if (shopExists) {
+    console.log('can edit shop');
+    console.log(shopToEdit);
+    shopToEdit.minCustHour = min;
+    shopToEdit.maxCustHour = max;
+    shopToEdit.avgCookiesCust = avg;
+  } else {
     var newShop = new Shop(shop, min, max, avg);
-    /*}
-  }*/
+  }
 
   event.target.shop.value = null;
   event.target.min.value = null;

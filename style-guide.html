@@ -1,15 +1,50 @@
 <html>
-<head>
-  <title>Style Guide</title>
-  <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-  <link rel='stylesheet' type='text/css' href='stylesheet.css'>
-</head>
-<body>
+  <head>
+    <title>SSC Style Guide</title>
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
+    <link rel='stylesheet' type='text/css' href='layout.css'>
+    <link rel='stylesheet' type='text/css' href='style.css'>
+  </head>
 
-  <p class='highlight'>custom font for highlights<p>
-  <p class='data'>standard data font: 1234567890</p>
-  <p>standard text font</p>
+  <body id="styleguide">
+    <header class="highlight">
+        <img id='logo' src='images/salmon.png' alt='company logo'/>
+        <h1>Seattle Salmon Cookies</h1>
+        <p>Salmon cookies made with fish, salmon cookies are delish!</p>
+    </header>
 
-    <h3 class='box'>Boxes and tables will be this color</h3>
-</body>
+    <div id="stylecontent">
+      <h1>Style Guide</h1>
+      <h2>Background Colors</h2>
+      <div id='pallete'>
+        <p id="pagecolor">Page background #DBC78B</p>
+        <p id="headercolor">Header &amp;<br />footer<br />#8397A6</p>
+        <p id="tablecolor">Tables and figures<br />#C97954 </p>
+      </div>
+      <h2 id='typography'>Typography</h2>
+      <p>Use this font for highlights and headings:</p>
+      <div class="highlight">
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+      </div>
+      <p>Font family: Oswald, sans-serif</p>
+      <p>Font weight: 700;</p>
+      <p>Font color: #8D3722</p>
+      <hr />
+      <p>Use this font for body text:</p>
+      <p>Font family: Georgia, serif;
+      <p>Color: #464426
+      <hr />
+      <div id="datastyle">
+        <p>Use this font for data:</p>
+        <p>Font family: Verdana, sans-serif;</p>
+        <p>Color: #162215</p>
+      </div>
+    </div>
+    <footer></footer>
+  </body>
 </html>

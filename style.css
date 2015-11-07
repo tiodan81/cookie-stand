@@ -16,6 +16,11 @@
   font-size: 18px;
 }
 
-ul {
+aside {
   font-family: 'Oswald', sans-serif;
+}
+
+#datastyle {
+  font-family: Verdana, sans-serif;
+  color: #162215;
 }

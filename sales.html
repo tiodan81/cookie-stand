@@ -6,41 +6,41 @@
   </head>
   <body>
 
-    <header>
-      <img id='logo' src='images/salmon.png' />
-      <h1 class='highlight'>Seattle Salmon Cookies</h1>
+    <header class='highlight'>
+      <img id='logo' src='images/salmon.png' alt='company logo'/>
+      <h1>Seattle Salmon Cookies</h1>
+      <p>Salmon cookies made with fish, salmon cookies are delish!</p>
     </header>
 
-    <main>
+    <div id="wrapper">
 
-      <h3>Hey look: a table showing hourly cookie sales and daily totals by location!</h3>
+      <h2>Hey look: a table showing hourly cookie sales and daily totals by location!</h2>
       <div id='table'></div>
 
-    <form id='shopform'>
-      <fieldset>
-        <legend>Add/modify a shop</legend>
+      <form id='shopform'>
+        <fieldset>
+          <legend>Add/modify a shop</legend>
 
-        <label for='shop'>Shop name</label>
-        <input name='shop' type='text'>
-        <br />
+          <label for='shop'>Shop name</label>
+          <input name='shop' type='text'>
+          <br />
 
-        <label for='min'>Minimum Customers Per Hour</label>
-        <input name='min' type='text' size='50'>
-        <br />
+          <label for='min'>Minimum Customers Per Hour</label>
+          <input name='min' type='text' size='50'>
+          <br />
 
-        <label for='max'>Maximum Customers Per Hour</label>
-        <input name='max' type='text' size='50'>
-        <br />
+          <label for='max'>Maximum Customers Per Hour</label>
+          <input name='max' type='text' size='50'>
+          <br />
 
-        <label for='avg'>Average Cookies Per Customer</label>
-        <input name='avg' type='text' size='50'>
-        <br />
+          <label for='avg'>Average Cookies Per Customer</label>
+          <input name='avg' type='text' size='50'>
+          <br />
 
-        <button id='submit' type='submit'>Submit</button>
-     </fieldset>
-    </form>
-
-    </main>
+          <button id='submit' type='submit'>Submit</button>
+       </fieldset>
+      </form>
+    </div>
     <script src="script.js" type="text/javascript"></script>
 
   </body>
