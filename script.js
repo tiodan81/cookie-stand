@@ -110,6 +110,8 @@ var handleFormSubmit = function(event) {
     shopToEdit.minCustHour = min;
     shopToEdit.maxCustHour = max;
     shopToEdit.avgCookiesCust = avg;
+    shopToEdit.hourlyTotals = [];
+    shopToEdit.hourlyModel();
   } else {
     var newShop = new Shop(shop, min, max, avg);
   }
